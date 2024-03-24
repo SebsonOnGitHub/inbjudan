@@ -21,7 +21,7 @@
     }
     .image-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         grid-gap: 25px;
         padding: 0px;
     }
@@ -35,6 +35,35 @@
         display: block; /* Ensure the image is displayed as a block element */
         margin: 0 auto; /* Center the image horizontally */
         max-width: 40%; /* Ensure the image doesn't exceed the width of its container */
+    }
+	
+	@media only screen and (max-width: 768px) {
+		.header {
+			font-family: Garamond, serif;
+			font-size: 20px;
+			text-align: center; /* Center align the text */
+			padding: 10px 0; /* Add padding at the top and bottom */
+			background-color: #fafbfc; /* Background color for the header */
+			color: #000000; /* Text color for the header */
+		}
+		.image-grid {
+			display: inline;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-gap: 15px;
+			padding: 0px;
+		}
+		.image-grid img {
+			width: 100%;
+			height: auto;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+			padding: 0px;
+		}
+		.centered-image {
+			display: block; /* Ensure the image is displayed as a block element */
+			margin: 0 auto; /* Center the image horizontally */
+			max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+		}
     }
 </style>
 </head>
